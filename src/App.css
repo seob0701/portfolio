@@ -1,0 +1,21 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  -ms-overflow-style: none;
+}
+body.hidden {
+  overflow: hidden;
+}
+body.hidden * {
+  touch-action: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  position: relative;
+}

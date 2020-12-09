@@ -1,0 +1,291 @@
+$phone: "Only screen and (max-width : 768px)";
+$pad: "Only screen and (max-width : 1569px)";
+$desktop: "Only screen and (min-width : 1570px)";
+
+@media #{$desktop} {
+  .contact {
+    .location_name {
+      color: #2471d8;
+      font-size: 50px;
+      position: absolute;
+      top: 100px;
+    }
+    .byebye {
+      color: #2471d8;
+      font-size: 50px;
+      position: absolute;
+      top: 70%;
+    }
+    .byebyebye {
+      color: #999999;
+      // font-size: 50px;
+      position: absolute;
+      top: 83%;
+    }
+    font-family: "Do Hyeon", sans-serif;
+    background-color: #fff;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    h1 {
+      position: absolute;
+      top: 100px;
+    }
+    .contact_box {
+      width: 500px;
+      height: 300px;
+      border-radius: 12px;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 13px;
+      position: relative;
+      transform-style: preserve-3d;
+      // transition: all 2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        .info {
+          div {
+            input {
+              font-size: 30px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .info {
+        div {
+          display: flex;
+          input {
+            font-size: 24px;
+            font-family: "Do Hyeon", sans-serif;
+            border: none;
+            outline: none;
+          }
+          p {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            margin: 12px;
+          }
+        }
+        p {
+          font-size: 24px;
+          display: flex;
+          align-items: center;
+          margin: 12px;
+          svg {
+            margin-right: 10px;
+          }
+          a {
+            color: black;
+            text-decoration: none;
+            &:hover {
+              color: #ff3c1d;
+            }
+          }
+        }
+      }
+      &:hover {
+        width: 550px;
+        height: 350px;
+        .info {
+          p {
+            font-size: 30px;
+          }
+        }
+      }
+      .copy.ed {
+        color: #ff3c1d;
+      }
+    }
+  }
+}
+@media #{$pad} {
+  .contact {
+    .location_name {
+      color: #2471d8;
+      font-size: 50px;
+      position: absolute;
+      top: 100px;
+    }
+    .byebye {
+      color: #2471d8;
+      font-size: 50px;
+      position: absolute;
+      top: 70%;
+    }
+    .byebyebye {
+      color: #999999;
+      // font-size: 50px;
+      position: absolute;
+      top: 83%;
+    }
+    font-family: "Do Hyeon", sans-serif;
+    background-color: #fff;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    h1 {
+      position: absolute;
+      top: 100px;
+    }
+    .contact_box {
+      width: 500px;
+      height: 300px;
+      border-radius: 12px;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 13px;
+      position: relative;
+      transform-style: preserve-3d;
+      // transition: all 2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        .info {
+          div {
+            input {
+              font-size: 30px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .info {
+        div {
+          display: flex;
+          input {
+            font-size: 24px;
+            font-family: "Do Hyeon", sans-serif;
+            border: none;
+            outline: none;
+          }
+          p {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            margin: 12px;
+          }
+        }
+        p {
+          font-size: 24px;
+          display: flex;
+          align-items: center;
+          margin: 12px;
+          svg {
+            margin-right: 10px;
+          }
+          a {
+            color: black;
+            text-decoration: none;
+            &:hover {
+              color: #ff3c1d;
+            }
+          }
+        }
+      }
+      &:hover {
+        width: 550px;
+        height: 350px;
+        .info {
+          p {
+            font-size: 30px;
+          }
+        }
+      }
+      .copy.ed {
+        color: #ff3c1d;
+      }
+    }
+  }
+}
+
+@media #{$phone} {
+  .contact {
+    .location_name {
+      color: #2471d8;
+      font-size: 50px;
+      position: absolute;
+      top: 100px;
+    }
+    .byebye {
+      color: #2471d8;
+      font-size: 40px;
+      position: absolute;
+      top: 70%;
+    }
+    .byebyebye {
+      color: #999999;
+      // font-size: 50px;
+      position: absolute;
+      top: 83%;
+    }
+    font-family: "Do Hyeon", sans-serif;
+    background-color: #fff;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    h1 {
+      position: absolute;
+      top: 100px;
+    }
+    .contact_box {
+      width: 380px;
+      height: 300px;
+      border-radius: 12px;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 13px;
+      position: relative;
+      transform-style: preserve-3d;
+      // transition: all 2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .info {
+        div {
+          display: flex;
+          input {
+            font-size: 24px;
+            font-family: "Do Hyeon", sans-serif;
+            border: none;
+            outline: none;
+          }
+          p {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            margin: 12px;
+          }
+        }
+        p {
+          font-size: 24px;
+          display: flex;
+          align-items: center;
+          margin: 12px;
+          svg {
+            margin-right: 10px;
+          }
+          a {
+            color: black;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .copy.ed {
+        color: #ff3c1d;
+      }
+    }
+  }
+}

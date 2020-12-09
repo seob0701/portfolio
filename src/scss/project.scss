@@ -1,0 +1,666 @@
+$phone: "Only screen and (max-width : 768px)";
+$pad: "Only screen and (max-width : 1569px)";
+$desktop: "Only screen and (min-width : 1570px)";
+
+@media #{$desktop} {
+  .project {
+    font-family: "Do Hyeon", sans-serif;
+    // background-color: #fff;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    .location_name {
+      color: #2471d8;
+      font-size: 50px;
+      position: absolute;
+      top: 80px;
+    }
+    .for_direction {
+      display: flex;
+
+      .project_box {
+        background-color: white;
+        width: 350px;
+        margin: 50px;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+        &:hover {
+          transform: translateY(-15px);
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 13px;
+        }
+        .proj_img {
+          height: 200px;
+          img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+        }
+        .proj_description {
+          padding: 15px;
+          border-top: 1px solid lightgray;
+          h3 {
+          }
+          p {
+          }
+        }
+      }
+    }
+
+    .modal {
+      z-index: 3;
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .close_btn_box {
+        position: relative;
+        width: 1300px;
+        .close_button {
+          // display: flex;
+          position: absolute;
+          cursor: pointer;
+          z-index: 3;
+          top: 10px;
+          right: -90px;
+          font-size: 20px;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          transition: all 0.1s ease-in-out;
+          &:hover {
+            color: #ff3c1d;
+          }
+        }
+      }
+
+      .md_overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+      .md_content {
+        overflow: scroll;
+        width: 1300px;
+        height: 600px;
+        position: relative;
+        padding: 50px 100px;
+        background-color: white;
+        text-align: center;
+        border-radius: 6px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+
+        h1 {
+          // margin-bottom: 20px;
+          padding: 20px;
+          // padding: 5px;
+          font-size: 36px;
+          border-bottom: 1px solid #999999;
+        }
+        section {
+          display: flex;
+          flex-direction: column;
+
+          .project_img_box {
+            .img_container {
+              img {
+                margin: 20px;
+                width: 500px;
+                object-fit: contain;
+              }
+            }
+          }
+
+          .modal_text {
+            // width: 390px;
+            padding: 16px;
+            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .p_box {
+              list-style: none;
+              // width: 500px;
+              margin: 20px 0 0 0;
+              padding: 10px;
+              text-align: start;
+              background-color: wheat;
+
+              li {
+                margin: 10px;
+              }
+            }
+          }
+        }
+        .git_web {
+          margin-top: 20px;
+          border-top: 1px solid #999999;
+          button {
+            cursor: pointer;
+            margin: 20px;
+            outline: none;
+            border: none;
+            background-color: white;
+            font-family: "Do Hyeon", sans-serif;
+            // &:hover {
+            //   color: #ff3c1d;
+            //   transform: translateY(-5px);
+            // }
+            div {
+              display: flex;
+              align-items: center;
+              transition: all 0.3s ease-in-out;
+              &:hover {
+                color: #ff3c1d;
+                transform: translateY(-5px);
+                a,
+                span {
+                  color: #ff3c1d;
+                }
+              }
+              svg {
+                margin-right: 10px;
+                font-size: 30px;
+              }
+              a,
+              span {
+                text-decoration: none;
+                color: black;
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .modal.hidden {
+      display: none;
+    }
+
+    .proj_btn {
+      position: absolute;
+      top: 80%;
+      // left: 60%;
+      // transform: translate(-50%, -50%);
+      background-color: transparent;
+      // border: none;
+      border: 2px solid #2471d8;
+      padding: 5px 7px;
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      font-size: 28px;
+      line-height: 26px;
+      // animation: blink 1s infinite;
+
+      animation: down-motion 1s infinite;
+      svg {
+        color: #2471d8;
+      }
+    }
+  }
+  // .project.hidden {
+  //   height: 100px;
+  //   overflow: hidden;
+  // }
+}
+
+@media #{$pad} {
+  .project {
+    font-family: "Do Hyeon", sans-serif;
+    // background-color: #fff;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1300px;
+    position: relative;
+    .location_name {
+      color: #2471d8;
+      font-size: 50px;
+      position: absolute;
+      top: 0px;
+    }
+    .for_direction {
+      display: flex;
+      flex-direction: column;
+      margin: 100px 0;
+
+      .project_box {
+        background-color: white;
+        width: 350px;
+        margin: 20px;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+        &:hover {
+          transform: translateY(-15px);
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 13px;
+        }
+        .proj_img {
+          height: 200px;
+          img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+        }
+        .proj_description {
+          padding: 15px;
+          border-top: 1px solid lightgray;
+          h3 {
+          }
+          p {
+          }
+        }
+      }
+    }
+
+    .modal {
+      z-index: 3;
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .close_btn_box {
+        position: relative;
+        width: 500px;
+        .close_button {
+          // display: flex;
+          position: absolute;
+          cursor: pointer;
+          z-index: 3;
+          top: 10px;
+          right: -90px;
+          font-size: 20px;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          transition: all 0.1s ease-in-out;
+          &:hover {
+            color: #ff3c1d;
+          }
+        }
+      }
+
+      .md_overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+      .md_content {
+        margin: 0 100px;
+        overflow: scroll;
+        width: 500px;
+        height: 500px;
+        position: relative;
+        padding: 50px 100px;
+        background-color: white;
+        text-align: center;
+        border-radius: 6px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+
+        h1 {
+          // margin-bottom: 20px;
+          padding: 20px;
+          // padding: 5px;
+          font-size: 36px;
+          border-bottom: 1px solid #999999;
+        }
+        section {
+          display: flex;
+          flex-direction: column;
+
+          .project_img_box {
+            .img_container {
+              img {
+                margin: 20px;
+                width: 500px;
+                object-fit: contain;
+              }
+            }
+          }
+
+          .modal_text {
+            // width: 390px;
+            padding: 16px;
+            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .p_box {
+              list-style: none;
+              // width: 500px;
+              margin: 20px 0 0 0;
+              padding: 10px;
+              text-align: start;
+              background-color: wheat;
+
+              li {
+                margin: 10px;
+              }
+            }
+          }
+        }
+        .git_web {
+          margin-top: 20px;
+          border-top: 1px solid #999999;
+          button {
+            cursor: pointer;
+            margin: 20px;
+            outline: none;
+            border: none;
+            background-color: white;
+            font-family: "Do Hyeon", sans-serif;
+            // &:hover {
+            //   color: #ff3c1d;
+            //   transform: translateY(-5px);
+            // }
+            div {
+              display: flex;
+              align-items: center;
+              transition: all 0.3s ease-in-out;
+              &:hover {
+                color: #ff3c1d;
+                transform: translateY(-5px);
+                a,
+                span {
+                  color: #ff3c1d;
+                }
+              }
+              svg {
+                margin-right: 10px;
+                font-size: 30px;
+              }
+              a,
+              span {
+                text-decoration: none;
+                color: black;
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .modal.hidden {
+      display: none;
+    }
+
+    .proj_btn {
+      display: none;
+      position: absolute;
+      top: 80%;
+      // left: 60%;
+      // transform: translate(-50%, -50%);
+      background-color: transparent;
+      // border: none;
+      border: 2px solid #2471d8;
+      padding: 5px 7px;
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      font-size: 28px;
+      line-height: 26px;
+      // animation: blink 1s infinite;
+
+      animation: down-motion 1s infinite;
+      svg {
+        color: #2471d8;
+      }
+    }
+  }
+  // .project.hidden {
+  //   height: 100px;
+  //   overflow: hidden;
+  // }
+}
+@media #{$phone} {
+  .project {
+    font-family: "Do Hyeon", sans-serif;
+    // background-color: #fff;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1300px;
+    position: relative;
+    .location_name {
+      color: #2471d8;
+      font-size: 50px;
+      position: absolute;
+      top: 0px;
+    }
+    .for_direction {
+      display: flex;
+      flex-direction: column;
+      padding-top: 100px;
+
+      .project_box {
+        background-color: white;
+        width: 350px;
+        margin: 20px;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+        &:hover {
+          transform: translateY(-15px);
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 13px;
+        }
+        .proj_img {
+          height: 200px;
+          img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+        }
+        .proj_description {
+          padding: 15px;
+          border-top: 1px solid lightgray;
+          white-space: nowrap;
+          h3 {
+          }
+          p {
+          }
+        }
+      }
+    }
+
+    .modal {
+      z-index: 3;
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .close_btn_box {
+        position: relative;
+        width: 200px;
+        .close_button {
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+          z-index: 3;
+          top: 10px;
+          right: -140px;
+          font-size: 20px;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          transition: all 0.1s ease-in-out;
+          &:hover {
+            color: #ff3c1d;
+          }
+        }
+      }
+
+      .md_overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+      .md_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 100px;
+        overflow: scroll;
+        width: 200px;
+        height: 500px;
+        position: relative;
+        padding: 100px 150px;
+        background-color: white;
+        text-align: center;
+        border-radius: 6px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+
+        h1 {
+          // margin-bottom: 20px;
+          padding: 20px;
+          // width: 210px;
+
+          white-space: nowrap;
+          // padding: 5px;
+          font-size: 36px;
+          border-bottom: 1px solid #999999;
+        }
+        section {
+          display: flex;
+          flex-direction: column;
+
+          .project_img_box {
+            .img_container {
+              img {
+                margin: 10px;
+                width: 400px;
+                object-fit: contain;
+              }
+            }
+          }
+
+          .modal_text {
+            // width: 390px;
+            padding: 16px;
+            width: 390px;
+            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .p_box {
+              list-style: none;
+              // width: 500px;
+              margin: 20px 0 0 0;
+              padding: 10px;
+              width: 400px;
+              text-align: start;
+              background-color: wheat;
+
+              li {
+                margin: 10px;
+              }
+            }
+          }
+        }
+        .git_web {
+          margin-top: 20px;
+          border-top: 1px solid #999999;
+          button {
+            display: flex;
+            cursor: pointer;
+            margin: 20px;
+            outline: none;
+            border: none;
+            background-color: white;
+            font-family: "Do Hyeon", sans-serif;
+            // &:hover {
+            //   color: #ff3c1d;
+            //   transform: translateY(-5px);
+            // }
+            div {
+              display: flex;
+              align-items: center;
+              transition: all 0.3s ease-in-out;
+              &:hover {
+                color: #ff3c1d;
+                transform: translateY(-5px);
+                a,
+                span {
+                  color: #ff3c1d;
+                }
+              }
+              svg {
+                margin-right: 10px;
+                font-size: 30px;
+              }
+              a,
+              span {
+                white-space: nowrap;
+                text-decoration: none;
+                color: black;
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .modal.hidden {
+      display: none;
+    }
+
+    .proj_btn {
+      display: none;
+      position: absolute;
+      top: 80%;
+      // left: 60%;
+      // transform: translate(-50%, -50%);
+      background-color: transparent;
+      // border: none;
+      border: 2px solid #2471d8;
+      padding: 5px 7px;
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      font-size: 28px;
+      line-height: 26px;
+      // animation: blink 1s infinite;
+
+      animation: down-motion 1s infinite;
+      svg {
+        color: #2471d8;
+      }
+    }
+  }
+  // .project.hidden {
+  //   height: 100px;
+  //   overflow: hidden;
+  // }
+}

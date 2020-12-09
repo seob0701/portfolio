@@ -1,0 +1,128 @@
+$phone: "Only screen and (max-width : 768px)";
+$desktop: "Only screen and (min-width : 769px)";
+
+@media #{$desktop} {
+  .nav {
+    font-family: "Bebas Neue", cursive;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 3;
+    // font-family: "Major Mono Display", monospace;
+
+    .nav_box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      h1 {
+        padding: 0;
+        margin: 0;
+      }
+      .btn {
+        display: none;
+      }
+      .desktop_ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li {
+          cursor: pointer;
+          margin: 0 10px;
+          font-size: 20px;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            color: #2471d8;
+          }
+        }
+      }
+    }
+    .phone_ul {
+      display: none;
+      li {
+      }
+    }
+  }
+}
+
+@media #{$phone} {
+  .nav {
+    font-family: "Bebas Neue", cursive;
+    // font-family: "Major Mono Display", monospace;
+    height: 74px;
+    transition: all 0.5s ease-in-out;
+    // position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    .nav_box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      // border-top: 1px solid #999999;
+      // border-bottom: 1px solid #999999;
+      position: relative;
+      z-index: 999;
+
+      background-color: white;
+      h1 {
+        padding: 0;
+        margin: 0;
+      }
+      .btn {
+        display: flex;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 999;
+      }
+      .desktop_ul {
+        list-style: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+        li {
+          cursor: pointer;
+          margin: 0 10px;
+          font-size: 20px;
+        }
+      }
+    }
+    .phone_ul {
+      cursor: pointer;
+      position: relative;
+      top: -204px;
+      overflow: hidden;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      transition: all 0.5s ease-in-out;
+      // z-index: 1;
+      background-color: #f1f1f1;
+      li {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: #2471d8;
+        }
+      }
+    }
+    .phone_ul.active {
+      top: 0px;
+      li {
+        width: 100%;
+      }
+    }
+  }
+  .nav.active {
+    height: 278px;
+  }
+}
