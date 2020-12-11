@@ -1,6 +1,7 @@
 import React from "react";
 import "../scss/about.scss";
 
+import picture from '../images/picture.jpg'
 import { AiOutlineArrowDown } from "react-icons/ai";
 
 const _handleClick = () => {
@@ -19,7 +20,7 @@ const About = () => {
               <h3>프론트엔드 개발자</h3>
 
               {/* 면접사진 */}
-              <img src="" alt="" />
+              <img src={picture} alt="" />
             </div>
             <div className="information">
               <h1>information</h1>
